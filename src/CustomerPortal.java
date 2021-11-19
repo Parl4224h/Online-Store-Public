@@ -500,7 +500,7 @@ public class CustomerPortal {
         double volumeTemp = 0;
         for (Item item : items){
             System.out.println(item + "Quantity: " + item.getStock());
-            total += item.getPrice();
+            total += item.getPrice() * item.getStock();
             volumeTemp += item.getWidth() * item.getLength() * item.getHeight();
         }
         int numOfLargeBoxes = (int) (volumeTemp/702);
